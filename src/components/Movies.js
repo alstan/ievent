@@ -26,7 +26,7 @@ class Movies extends Component {
               cover={<img alt="example" src={movie.imageSrc} />}
             >
               <h4>{movie.name}</h4>
-              <Link to="/tickets">
+              <Link to="/seats">
                 <Button type="primary">Buy now</Button>
               </Link>
             </Card>

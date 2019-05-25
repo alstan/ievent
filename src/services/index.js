@@ -9,3 +9,13 @@ export const getMovies = async () => {
     return error;
   }
 }
+
+export const getSeats = async () => {
+  try {
+    const response = await axios.get ('http://localhost:8000/seats');
+    return response.data;
+  }
+  catch(error){
+    return error;
+  }
+}

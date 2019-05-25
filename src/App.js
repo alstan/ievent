@@ -5,7 +5,8 @@ import moment from 'moment';
 import './App.css';
 import { 
   Tickets, 
-  Home
+  Home,
+  Seats
 } from './pages';
 
 const { Header, Content, Footer } = Layout;
@@ -19,6 +20,7 @@ function App() {
         <Content style={{ padding: '0 50px' }}>
             <Route exact path="/" component={Home}/>
             <Route path="/tickets" component={Tickets} />
+            <Route path="/seats" component={Seats} />
         </Content>
         <Footer style={{ textAlign: 'center' }}>
           Albuquerque INC. ©{moment().format('YYYY')} Created by Ant Secret

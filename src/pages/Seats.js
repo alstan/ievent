@@ -23,12 +23,14 @@ class Seats extends Component {
         
           {seats.map(seat =>
           <Col span={6}>
-            <Button
-            key={seat.id}
-            hoverable
-            >
-            {seat.number} 
-            </Button>
+            <Link to="/tickets">
+              <Button
+              key={seat.id}
+              hoverable
+              >
+              {seat.number} 
+              </Button>
+            </Link>
           </Col>
         )}
       </Row>

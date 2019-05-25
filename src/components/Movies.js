@@ -14,7 +14,7 @@ class Movies extends Component {
 
   render() {
     return (<Fragment>
-      {movies.map(movie => 
+      {/*movies.map(movie => 
         <Card
           hoverable
           style={{ width: 240 }}
@@ -22,7 +22,7 @@ class Movies extends Component {
         >
           <h4>Aladin</h4>
         </Card>
-      )}
+      )*/}
       
     </Fragment>);
   }

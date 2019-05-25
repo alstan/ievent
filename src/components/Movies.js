@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import { Card } from 'antd';
+import { Card, Col, Row } from 'antd';
 import { getMovies } from '../services';
 
 class Movies extends Component {
@@ -15,16 +15,20 @@ class Movies extends Component {
     const { movies } = this.state;
 
     return (<Fragment>
-      {movies.map(movie => 
-        <Card
-          key={movie.id}
-          hoverable
-          style={{ width: 240 }}
-          cover={<img alt="example" src={movie.imageSrc} />}
-        >
-          <h4>{movie.name}</h4>
-        </Card>
-      )}
+      <Row gutter={16}>
+        {movies.map(movie => 
+          <Col span={6}>
+            <Card
+              key={movie.id}
+              hoverable
+              style={{ width: 240 }}
+              cover={<img alt="example" src={movie.imageSrc} />}
+            >
+              <h4>{movie.name}</h4>
+            </Card>
+          </Col>
+        )}
+      </Row>
     </Fragment>);
   }
 }

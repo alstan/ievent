@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react';
-import { Card, Col, Row } from 'antd';
+import { Card, Col, Row, Button } from 'antd';
+import { Link } from 'react-router-dom';
 import { getMovies } from '../services';
 
 class Movies extends Component {
@@ -25,6 +26,9 @@ class Movies extends Component {
               cover={<img alt="example" src={movie.imageSrc} />}
             >
               <h4>{movie.name}</h4>
+              <Link to="/tickets">
+                <Button type="primary">Buy now</Button>
+              </Link>
             </Card>
           </Col>
         )}
